@@ -6,7 +6,7 @@ with open('README.md', 'r', encoding='utf-8') as readme_file:
 
 setup(
     name="pyCoopGame",
-    version="0.0.3",
+    version="0.0.5",
     description="various profit allocation methods from cooperative game theory",
     author="Fabian Lechtenberg",
     author_email="fabian.lechtenberg@upc.edu",
