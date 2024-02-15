@@ -105,9 +105,8 @@ def create_model_data(game):
     COAL = [str(coal) for coal in game.index if str(coal) and str(coal) not in ['()'] and len(coal) < len(PLAYER)]
     GRAND_COAL = [coal for coal in game.index if str(coal) and str(coal) not in ['()'] and len(coal) == len(PLAYER)]
     PLAYER_SUB = {str(coal): list(eval(coal)) for coal in COAL}
-    value = {str(coal): max(game['value'][eval(coal)], 0) for coal in COAL}
-    gc = {None: max(float(game['value'][GRAND_COAL].iloc[0]),0)}
-    print(gc)
+    value = {str(coal): game['value'][eval(coal)] for coal in COAL}
+    gc = {None: float(game['value'][GRAND_COAL].iloc[0])}
     model_data = {None: {
         'COAL': COAL,
         'PLAYER': PLAYER,
