@@ -1,10 +1,10 @@
-# Pulpo
+# pyCoopGame
 
 This package implements a few popular profit allocation methods from cooperative Game Theory.
 
 ## Installation
 
-Currently, pyCoopGame is still under development and not yet uploaded to pypi index. Once a stable version is released, it will be installable via:
+A version of pyCoopGame can already be installed via:
 
 ```bash
 pip install pyCoopGame
