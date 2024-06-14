@@ -55,7 +55,7 @@ def solve_maali_model(instance, GAMS=False):
     return results, instance
 
 
-def maalis(game, GAMS=False):
+def maali(game, GAMS=False):
     game['coalition'] = game['coalition'].apply(frozenset)
     v = {frozenset(coalition): value for coalition, value in zip(game['coalition'], game['value'])}
 
@@ -72,6 +72,7 @@ def maalis(game, GAMS=False):
     # Return the results
     if (results.solver.status == SolverStatus.ok) and (
             results.solver.termination_condition == TerminationCondition.optimal):
+        print("Maali's solution properly calculated.")
         return {j: pyo.value(solved_model.x[j]) for j in players}
     else:
         print("Solver failed to find an optimal solution.")
@@ -86,5 +87,5 @@ data = {
 game = pd.DataFrame(data)
 
 # Call the maalis function
-allocations = maalis(game, GAMS=r'C:\GAMS\37\gams.exe')
+allocations = maali(game, GAMS=r'C:\GAMS\37\gams.exe')
 print(allocations)
