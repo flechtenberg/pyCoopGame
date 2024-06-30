@@ -56,7 +56,8 @@ def solve_maali_model(instance, GAMS=False):
 
 
 def maali(game, GAMS=False):
-    game['coalition'] = game['coalition'].apply(frozenset)
+    # Prepare the data
+    #game['coalition'] = game['coalition'].apply(frozenset)
     v = {frozenset(coalition): value for coalition, value in zip(game['coalition'], game['value'])}
 
     players = list(set(player for coalition in game['coalition'] for player in coalition))
@@ -78,14 +79,3 @@ def maali(game, GAMS=False):
         print("Solver failed to find an optimal solution.")
         return None
 
-
-# Example game data
-data = {
-    'coalition': [[], [1], [2], [3], [1, 2], [1, 3], [2, 3], [1, 2, 3]],
-    'value': [0, 36.91, 0.18, 2.48, 38.61, 39.46, 3.00, 41.53]
-}
-game = pd.DataFrame(data)
-
-# Call the maalis function
-allocations = maali(game, GAMS=r'C:\GAMS\37\gams.exe')
-print(allocations)
