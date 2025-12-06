@@ -3,6 +3,11 @@
 <p align="center">
     <h1 align="center">pyCoopGame</h1>
 </p>
+
+<p align="center">
+  <img src="https://github.com/flechtenberg/flechtenberg_images/blob/main/pyCG_logo-min.png?raw=true" width="300" />
+</p>
+
 <p align="center">
     <em>Profit Allocation Methods</em>
 </p>
