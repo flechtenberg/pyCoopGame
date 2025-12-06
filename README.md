@@ -172,7 +172,9 @@ Copyright (c) 2024, Fabian Lechtenberg. All rights reserved.
 
 ##  Acknowledgments
 
-...
+If you use pyCoopGame in your research, please cite the following publication:
+
+> Lechtenberg, F., Aresté-Saló, Ll., Espuña, A., & Graells, M. (2025). Cooperative multi-actor multi-criteria optimization framework for process integration. *Applied Energy, 377*(Part C), 124581. https://doi.org/10.1016/j.apenergy.2024.124581
 
 [**Return**](#-quick-links)
 
